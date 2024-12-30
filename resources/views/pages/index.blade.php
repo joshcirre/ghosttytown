@@ -26,6 +26,7 @@ new class extends Component
         if ($this->search) {
             $searchResults = Config::withCount('starredBy')
                 ->where('description', 'like', '%'.$this->search.'%')
+                ->where('approved', true)
                 ->orderByDesc('created_at')
                 ->paginate(12);
 
@@ -38,10 +39,12 @@ new class extends Component
         return [
             'popularConfigs' => Config::withCount('starredBy')
                 ->orderByDesc('starred_by_count')
+                ->where('approved', true)
                 ->limit(8)
                 ->get(),
             'latestConfigs' => Config::withCount('starredBy')
                 ->orderByDesc('created_at')
+                ->where('approved', true)
                 ->paginate(12),
             'isSearching' => false,
         ];
