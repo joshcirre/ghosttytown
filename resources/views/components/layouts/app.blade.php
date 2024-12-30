@@ -43,10 +43,10 @@ new class extends Component
         >
             <flux:sidebar.toggle class="lg:hidden" icon="bars-2" />
 
-            <flux:brand href="#" name="ghostty.town" class="flex items-center max-lg:hidden dark:hidden">
+            <flux:brand name="ghostty.town" class="flex items-center max-lg:hidden dark:hidden">
                 <flux:icon.command-line class="dark:text-white" />
             </flux:brand>
-            <flux:brand href="#" name="ghostty.town" class="lg:flex items-center max-lg:!hidden hidden dark:flex">
+            <flux:brand name="ghostty.town" class="lg:flex items-center max-lg:!hidden hidden dark:flex">
                 <flux:icon.command-line class="dark:text-white" />
             </flux:brand>
 
@@ -83,8 +83,8 @@ new class extends Component
         >
             <flux:sidebar.toggle class="lg:hidden" icon="x-mark" />
 
-            <flux:brand href="/" name="ghostty.town" class="px-2 dark:hidden" />
-            <flux:brand href="/" name="ghostty.town" class="hidden px-2 dark:flex" />
+            <flux:brand name="ghostty.town" class="px-2 dark:hidden" />
+            <flux:brand name="ghostty.town" class="hidden px-2 dark:flex" />
 
             <flux:navlist variant="outline">
                 <flux:navlist.item icon="home" href="/">Home</flux:navlist.item>
