@@ -25,7 +25,10 @@ new class extends Component
     {
         if ($this->search) {
             $searchResults = Config::withCount('starredBy')
-                ->where('description', 'like', '%'.$this->search.'%')
+                ->where(function($query) {
+                    $query->where('description', 'like', '%'.$this->search.'%')
+                          ->orWhere('content', 'like', '%'.$this->search.'%');
+                })
                 ->where('approved', true)
                 ->orderByDesc('created_at')
                 ->paginate(12);
@@ -73,7 +76,7 @@ new class extends Component
                                 />
                                 @if ($config->starred_by_count > 0)
                                     <div
-                                        class="absolute flex items-center gap-1 px-2 py-1 text-xs text-white rounded bottom-2 right-2 bg-black/50"
+                                        class="flex absolute right-2 bottom-2 gap-1 items-center px-2 py-1 text-xs text-white rounded bg-black/50"
                                     >
                                         <flux:icon.star variant="solid" class="text-yellow-500 opacity-70 size-3" />
                                         {{ $config->starred_by_count }}
@@ -100,7 +103,7 @@ new class extends Component
                                 />
                                 @if ($config->starred_by_count > 0)
                                     <div
-                                        class="absolute flex items-center gap-1 px-2 py-1 text-xs text-white rounded bottom-2 right-2 bg-black/50"
+                                        class="flex absolute right-2 bottom-2 gap-1 items-center px-2 py-1 text-xs text-white rounded bg-black/50"
                                     >
                                         <flux:icon.star variant="solid" class="text-yellow-500 size-3" />
                                         {{ $config->starred_by_count }}
@@ -125,7 +128,7 @@ new class extends Component
                                 />
                                 @if ($config->starred_by_count > 0)
                                     <div
-                                        class="absolute flex items-center gap-1 px-2 py-1 text-xs text-white rounded bottom-2 right-2 bg-black/50"
+                                        class="flex absolute right-2 bottom-2 gap-1 items-center px-2 py-1 text-xs text-white rounded bg-black/50"
                                     >
                                         <flux:icon.star variant="solid" class="text-yellow-500 opacity-70 size-3" />
                                         {{ $config->starred_by_count }}
