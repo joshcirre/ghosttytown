@@ -3,6 +3,7 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
 
 Route::get('/auth/redirect', function () {
@@ -24,6 +25,7 @@ Route::get('/auth/callback', function () {
         $user = User::create([
             'email' => $githubUser->email,
             'name' => $githubUser->name,
+            'password' => bcrypt(Str::random(24)), // Add a random hashed password
             'github_id' => $githubUser->id,
             'github_token' => $githubUser->token,
             'github_refresh_token' => $githubUser->refreshToken,
