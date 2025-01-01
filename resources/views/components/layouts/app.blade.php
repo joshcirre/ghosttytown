@@ -28,9 +28,9 @@ new class extends Component
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:title" content="ghostyy.town" />
-        <meta property="og:description" content="share your spooky configs" />
+        <meta property="og:description" content="share your ghostty terminal configs and find new ideas from others" />
 
-        <title>ghostyy.town – share your spooky configs</title>
+        <title>ghostty.town – share your spooky configs</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />

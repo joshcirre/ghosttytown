@@ -11,7 +11,7 @@
         <meta property="og:title" content="ghostyy.town" />
         <meta property="og:description" content="share your ghostty terminal configs and find new ideas from others" />
 
-        <title>ghostyy.town – share your spooky configs</title>
+        <title>ghostty.town – share your spooky configs</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
