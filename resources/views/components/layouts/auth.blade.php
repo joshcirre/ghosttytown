@@ -5,7 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-        <title>{{ config("app.name", "My Laravel App") }}</title>
+        <meta property="og:image" content="{{ asset("images/og-image.jpg") }}" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:title" content="ghostyy.town" />
+        <meta property="og:description" content="share your ghostty terminal configs and find new ideas from others" />
+
+        <title>ghostyy.town – share your spooky configs</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
