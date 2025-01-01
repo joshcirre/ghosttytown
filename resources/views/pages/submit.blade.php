@@ -33,7 +33,7 @@ new class extends Component
             'content' => $this->pull('content'),
         ]);
 
-        Flux::toast('Thanks for sharing!', variant: 'success');
+        Flux::toast(heading: 'Thanks for sharing!', text: 'Your Ghostty config will be published after review.', variant: 'success');
 
         $this->redirect('/', navigate: true);
     }
