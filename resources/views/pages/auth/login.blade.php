@@ -22,7 +22,7 @@ new class extends Component
 
         Session::regenerate();
 
-        $this->redirectIntended(default: route('/', absolute: false), navigate: true);
+        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
     }
 };
 ?>
