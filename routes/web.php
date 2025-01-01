@@ -25,7 +25,7 @@ Route::get('/auth/callback', function () {
         $user = User::create([
             'email' => $githubUser->email,
             'name' => $githubUser->name,
-            'password' => bcrypt(Str::random(24)), // Add a random hashed password
+            'password' => bcrypt(Str::random(24)), // Random password for new users only
             'github_id' => $githubUser->id,
             'github_token' => $githubUser->token,
             'github_refresh_token' => $githubUser->refreshToken,
