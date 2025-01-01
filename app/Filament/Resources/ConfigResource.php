@@ -27,6 +27,8 @@ class ConfigResource extends Resource
                 FileUpload::make('image_url')
                     ->image()
                     ->disk('s3')
+                    ->directory('config-photos')
+                    ->visibility('public')
                     ->label('Image'),
                 TextInput::make('description'),
                 TextInput::make('content'),
