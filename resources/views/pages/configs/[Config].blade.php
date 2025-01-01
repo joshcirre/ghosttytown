@@ -73,7 +73,7 @@ new class extends Component
             </div>
             <image
                 class="object-cover w-full h-full rounded-lg"
-                src="{{ Storage::disk("public")->url($config->image_url) }}"
+                src="{{ Storage::disk("s3")->url($config->image_url) }}"
                 alt="ghostty config image"
             />
             <flux:textarea readonly rows="auto">{{ $config->content }}</flux:textarea>

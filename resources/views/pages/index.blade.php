@@ -68,7 +68,7 @@ new class extends Component
                             <a href="/configs/{{ $config->id }}" class="relative group">
                                 <image
                                     class="object-cover w-full h-full rounded-lg"
-                                    src="{{ Storage::disk("public")->url($config->image_url) }}"
+                                    src="{{ Storage::disk("s3")->url($config->image_url) }}"
                                     alt="ghostty config image"
                                 />
                                 @if ($config->starred_by_count > 0)
@@ -95,7 +95,7 @@ new class extends Component
                             <a href="/configs/{{ $config->id }}" class="relative group">
                                 <image
                                     class="object-cover w-full h-full rounded-lg"
-                                    src="{{ Storage::disk("public")->url($config->image_url) }}"
+                                    src="{{ Storage::disk("s3")->url($config->image_url) }}"
                                     alt="ghostty config image"
                                 />
                                 @if ($config->starred_by_count > 0)
@@ -120,7 +120,7 @@ new class extends Component
                             <a href="/configs/{{ $config->id }}" class="relative group">
                                 <image
                                     class="object-cover w-full h-full rounded-lg"
-                                    src="{{ Storage::disk("public")->url($config->image_url) }}"
+                                    src="{{ Storage::disk("s3")->url($config->image_url) }}"
                                     alt="ghostty config image"
                                 />
                                 @if ($config->starred_by_count > 0)

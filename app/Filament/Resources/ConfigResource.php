@@ -26,8 +26,8 @@ class ConfigResource extends Resource
             ->schema([
                 FileUpload::make('image_url')
                     ->image()
-                    ->label('Image')
-                    ->imageEditor(),
+                    ->disk('s3')
+                    ->label('Image'),
                 TextInput::make('description'),
                 TextInput::make('content'),
                 Toggle::make('approved'),
@@ -39,7 +39,8 @@ class ConfigResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('description'),
-                ImageColumn::make('image_url'),
+                ImageColumn::make('image_url')
+                    ->disk('s3'),
                 IconColumn::make('approved')
                     ->boolean(),
             ])

@@ -16,6 +16,7 @@
         "laravel/pail": "^1.1",
         "laravel/prompts": "^0.3",
         "laravel/tinker": "^2.0",
+        "league/flysystem-aws-s3-v3": "^3.0",
         "livewire/flux": "^1.0",
         "livewire/flux-pro": "^1.0",
         "livewire/livewire": "^3.0",
