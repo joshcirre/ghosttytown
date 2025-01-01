@@ -1,13 +1,13 @@
 <?php
 
+use function Laravel\Folio\middleware;
+use function Laravel\Folio\name;
+
 use Flux\Flux;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Validate;
 use Livewire\Volt\Component;
 use Livewire\WithFileUploads;
-
-use function Laravel\Folio\middleware;
-use function Laravel\Folio\name;
 
 middleware(['auth', 'verified']);
 name('submit');

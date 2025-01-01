@@ -1,11 +1,11 @@
 <?php
 
+use function Laravel\Folio\name;
+
 use App\Models\Config;
 use Livewire\Attributes\Url;
 use Livewire\Volt\Component;
 use Livewire\WithPagination;
-
-use function Laravel\Folio\name;
 
 name('dashboard');
 
