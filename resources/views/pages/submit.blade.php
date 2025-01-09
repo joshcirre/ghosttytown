@@ -27,6 +27,7 @@ new class extends Component
     public function submit()
     {
         $this->validate();
+
         $photoPath = $this->photo->storePublicly('config-photos', 's3');
 
         Auth::user()->configs()->create([
